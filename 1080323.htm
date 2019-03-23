@@ -16,19 +16,28 @@
             document.myForm.生日.value = patient.birthDate;
         }
         function button() {
-            if (document.myForm.姓名.value == "")//假如姓名沒有寫
-            {
-                alert("姓名必填寫!");
-                return false;//執行完上一行後跳出
-            }
-            telp = document.myForm.電話.value;
-            if (isNaN(telp))//is not a number
-            {
+             telp = document.myForm.電話.value;
+             if (document.myForm.姓名.value == "")//假如姓名沒有寫
+             {
+                 alert("姓名必填寫!");
+		         if (isNaN(telp))//is not a number
+                 {
+                      alert("電話話碼輸入的要是數字!");
+                 }
+              return false;//執行完上一行後跳出
+             }
+           
+             if (isNaN(telp))//is not a number
+             {
                 alert("電話話碼輸入的要是數字!");
+                if (document.myForm.姓名.value == " ")//假如姓名沒有寫
+                {
+                    alert("姓名必填寫!");
+		        }
                 return false;//執行完上一行後跳出
-            }
-            return true;
-        }
+             }
+              return true;
+      }
         function getParient() {
             //是否有喝酒與抽菸，如果有是各多少
             var form = document.getElementById("myForm");
