@@ -16,7 +16,7 @@
             document.myForm.生日.value = patient.birthDate;
         }
         function button() {
-            if (document.myForm.姓名.value == " ")//假如姓名沒有寫
+            if (document.myForm.姓名.value == "")//假如姓名沒有寫
             {
                 alert("姓名必填寫!");
                 return false;//執行完上一行後跳出
@@ -250,7 +250,7 @@
         </center>
         <h2>一.基本資料</h2><br>
         姓名：
-        <input type="text" name="姓名" value=" " id="MyName" />
+        <input type="text" name="姓名" value="" id="MyName" />
         生日：
         <input type="text" name="生日" value=" 西元/月/日" id="birthday" style="width:90px" />
         身分證字號：
